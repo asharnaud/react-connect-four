@@ -22,11 +22,25 @@ const initialState = {
 
 let appState = initialState
 
+
+const showStateExplorer = document.location.search.indexOf('stateexplorer') !== -1
+
+function StateExplorer (state) {
+  const stateJSON = JSON.stringify(state, null, 2)
+  return (
+    <section className='explorerContainer'>
+      <h1>State Explorer</h1>
+      <textarea value={stateJSON}></textarea>
+    </section>
+  )
+}
+
 function App (appState) {
   return (
     <div>
     {Board(appState)}
     {ResetButton()}
+    {StateExplorer(appState)}
     </div>
   )
 }
