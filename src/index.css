@@ -42,5 +42,28 @@ body {
 }
 
 .red {
+  background: #fff;
+  border-radius: 100px;
+  box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
+  display: flex;
+  flex: 1;
+  opacity: 1;
   background-color: red;
+}
+
+.yellow {
+  background: #fff;
+  border-radius: 100px;
+  box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
+  display: flex;
+  flex: 1;
+  opacity: 1;
+  background-color: yellow;
+}
+
+.reset-button {
+  background: #fff;
+  margin: 50px 10px 10px 400px;
+  border: 1px solid black;
+  width: 100px;
 }

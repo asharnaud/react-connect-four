@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import Board from './board';
 import Pieces from './pieces';
 import Row from './row';
+import ResetButton from './reset';
 import './index.css';
 
 
 const initialState = {
-  playerTurn: "Red",
+  playerTurn: 'r',
   board: [
     [null, null, null, null, null, null],
     [null, null, null, null, null, null],
@@ -21,24 +22,22 @@ const initialState = {
 
 let appState = initialState
 
-
-function switchTurn (appState) {
-  if (appState.playerTurn === "Red") {
-    appState.playerTurn = "Yellow"
-  } else {
-    appState.playerTurn = "Red"
-  }
-}
-
 function App (appState) {
   return (
     <div>
     {Board(appState)}
+    {ResetButton()}
     </div>
   )
 }
 
+const rootEl = document.getElementById('root')
+
 function renderNow () {
-ReactDOM.render(App(appState), document.getElementById('root'));
+  ReactDOM.render(App(appState), rootEl)
+  window.requestAnimationFrame(renderNow)
 }
-renderNow()
+
+window.requestAnimationFrame(renderNow)
+
+export default appState

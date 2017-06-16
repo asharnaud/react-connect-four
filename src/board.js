@@ -7,7 +7,7 @@ function Board (state) {
     return (
     <div className="game-container">
       <div className="board">
-        {Row(state.board)}
+        {Row(state)}
       </div>
     </div>
     )

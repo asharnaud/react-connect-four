@@ -1,27 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Pieces from './pieces';
+import appState from './index';
 
-function addGamePiece (evt, appState) {
-  evt.preventDefault()
-  let rowPlayed = evt.currentTarget
-  let rowChildren = evt.currentTarget.children
-  console.log(rowPlayed)
-  console.log(rowChildren)
-  for (let i = rowChildren.length - 1; i >= 0; i--) {
-    console.log(i)
-    // if ( === null) {
-    //   i.className="Red"
-    // }
+console.log(appState)
+
+function switchTurn () {
+  if (appState.playerTurn === "r") {
+    appState.playerTurn = "y"
+  } else {
+    appState.playerTurn = "r"
+  }
+}
+
+function addGamePiece (index) {
+  let boardRow = appState.board[index]
+  for (let i = boardRow.length - 1; i >= 0; i--) {
+    if (boardRow[i] === null) {
+      boardRow[i] = appState.playerTurn
+      switchTurn()
+      return
+    }
   }
 }
 
 function Row (state) {
   let rowsArr = []
-  for (let i = 0; i < state.length; i++) {
+  for (let i = 0; i < state.board.length; i++) {
       rowsArr.push(
-      <div className="row-container" data-row={i} onClick={addGamePiece}>
-        {Pieces(state[i])}
+      <div className="row-container" data-row={i} onClick={addGamePiece.bind(null, i)}>
+        {Pieces(state.board[i],state)}
       </div>
       )
     }
