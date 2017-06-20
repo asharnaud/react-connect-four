@@ -8,7 +8,18 @@ import './index.css';
 
 
 const initialState = {
+  classVal: 'circle',
   playerTurn: 'r',
+  coordinates: null,
+  boardCoordinates: [
+    [[0,0], [0,1], [0,2], [0,3], [0,4], [0,5]],
+    [[1,0], [1,1], [1,2], [1,3], [1,4], [1,5]],
+    [[2,0], [2,1], [2,2], [2,3], [2,4], [2,5]],
+    [[3,0], [3,1], [3,2], [3,3], [3,4], [3,5]],
+    [[4,0], [4,1], [4,2], [4,3], [4,4], [4,5]],
+    [[5,0], [5,1], [5,2], [5,3], [5,4], [5,5]],
+    [[6,0], [6,1], [6,2], [6,3], [6,4], [6,5]]
+  ],
   board: [
     [null, null, null, null, null, null],
     [null, null, null, null, null, null],
@@ -22,25 +33,36 @@ const initialState = {
 
 let appState = initialState
 
-
-const showStateExplorer = document.location.search.indexOf('stateexplorer') !== -1
-
-function StateExplorer (state) {
-  const stateJSON = JSON.stringify(state, null, 2)
+function Players () {
   return (
-    <section className='explorerContainer'>
-      <h1>State Explorer</h1>
-      <textarea value={stateJSON}></textarea>
-    </section>
+    <div className="player-box-container">
+      <div className="player-box">
+      <p>Player 1</p>
+      <div className='red'></div>
+      </div>
+      <div className="player-box">
+      <p>Player 2</p>
+      <div className='yellow'></div>
+      </div>
+    </div>
+  )
+}
+
+function Header () {
+  return (
+    <div>
+      <h1 className="header">Connect Four</h1>
+    </div>
   )
 }
 
 function App (appState) {
   return (
     <div>
+    {Header()}
+    {Players()}
     {Board(appState)}
     {ResetButton()}
-    {StateExplorer(appState)}
     </div>
   )
 }

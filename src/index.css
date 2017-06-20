@@ -1,8 +1,25 @@
 body {
-  background-color: #2d313a;
+  background-color: #b1b8c9;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: Chalkduster, fantasy;
+  font-size: 34px;
+  font-weight: 200;
+  line-height: 1.4;
+  margin: 0;
+  padding: 35px;
+  height: 6vh;
+}
+
+.header h1 {
+  padding-top: 10px;
 }
 
 .game-container {
@@ -21,7 +38,7 @@ body {
   padding: 10px;
   position: relative;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .board .circle {
@@ -63,24 +80,115 @@ body {
   background-color: yellow;
 }
 
-.reset-button {
-  background: #fff;
-  margin: 20px 780px;
-  border: 1px solid black;
-  width: 100px;
+.reset-btn {
+  background-color: black;
+  border-radius: 0.6em;
+  color: white;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 10px auto;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
-.explorerContainer {
-  float:right;
-  width: 98%;
-  background: #f3695f;
-  border-left: 2px solid black;
-  padding: 20px;
+.reset-btn:hover {
+  background-color: white;
+  color: black;
 }
 
-.explorerContainer textarea {
-  font-family: monospace;
-  width: 100%;
-  height: 400px;
-  font-size: 16px;
+.reset-btn:active {
+  background-color: white;
+  color: black;
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
+}
+
+.player-box-container {
+  position: relative;
+  display: flex;
+}
+
+.player-box {
+  flex: 1;
+  text-align: center;
+  text-decoration: underline;
+  font-family: sans-serif;
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 1.4;
+  margin: 5px;
+}
+
+.player-box-container .red {
+  background: red;
+  border-radius: 54px;
+  border: 2px solid black;
+  box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
+  opacity: 1;
+  height: 8vh;
+  width: 9%;
+  margin: 0 auto;
+}
+
+.player-box-container .yellow {
+  background: yellow;
+  border-radius: 54px;
+  border: 2px solid black;
+  box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
+  opacity: 1;
+  height: 8vh;
+  width: 9%;
+  margin: 0 auto;
+}
+
+.winner {
+  background: green;
+  border-radius: 100px;
+  box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
+  display: flex;
+  flex: 1;
+  opacity: 1;
+  background-color: yellow;
+}
+
+
+@media screen and (max-width: 600px) {
+    .game-container {
+        width: 100%;
+    }
+    .board {
+      height: 55vh;
+      width: 96%;
+    }
+    .player-box-container .red {
+      width: 25%
+    }
+    .player-box-container .yellow {
+      width: 25%
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+    .game-container {
+        width: 100%;
+    }
+    .board {
+      height: 65vh;
+      width: 65%;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+    .player-box-container .red {
+      width: 16%
+    }
+    .player-box-container .yellow {
+      width: 16%
+    }
 }

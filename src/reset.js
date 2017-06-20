@@ -17,7 +17,7 @@ function resetGame () {
 
 function ResetButton () {
   return (
-    <button className="reset-button" onClick={resetGame}>New Game</button>
+    <button className="reset-btn" onClick={resetGame}>New Game</button>
 )}
 
 export default ResetButton
