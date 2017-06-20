@@ -7,6 +7,7 @@ import {gameStatus} from 'connect4-lib';
 function Pieces (col, state) {
   let circleArr = []
   let classValue = state.classVal
+  // this loops through the row and builds the board with the pieces. Then changes the color with classValue.
   for (let i = 0; i < col.length; i++) {
     if (col[i] === 'r') {
       classValue = 'red'
