@@ -32,9 +32,11 @@ function isWinner () {
 }
 
 function updateBoardPiece (index) {
+  let status = gameStatus(appState.board).status
+  console.log(status)
   let boardRow = appState.board[index]
   for (let i = boardRow.length - 1; i >= 0; i--) {
-    if (boardRow[i] === null) {
+    if (status === 'in_progress' && boardRow[i] === null) {
       boardRow[i] = appState.playerTurn
       switchTurn()
       console.log(gameStatus(appState.board).coordinates)

@@ -149,13 +149,13 @@ body {
 }
 
 .winner {
-  background: green;
+  background: black;
   border-radius: 100px;
   box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
   display: flex;
   flex: 1;
   opacity: 1;
-  background-color: yellow;
+  background-color: black;
 }
 
 

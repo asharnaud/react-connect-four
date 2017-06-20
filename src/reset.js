@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import appState from './index';
 
 function resetGame () {
+    appState.classVal = 'circle',
+    appState.coordinates = null,
     appState.playerTurn = 'r'
     appState.board = [
       [null, null, null, null, null, null],
