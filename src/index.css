@@ -8,14 +8,14 @@ body {
 .header {
   background-color: black;
   color: white;
-  text-align: center;
   font-family: Chalkduster, fantasy;
   font-size: 34px;
   font-weight: 200;
+  height: 6vh;
   line-height: 1.4;
   margin: 0;
   padding: 35px;
-  height: 6vh;
+  text-align: center;
 }
 
 .header h1 {
@@ -23,9 +23,9 @@ body {
 }
 
 .game-container {
+  margin: 0 auto;
   text-align: center;
   width: 45%;
-  margin: 0 auto;
 }
 
 .board {
@@ -35,10 +35,10 @@ body {
   box-shadow: 0px 0px 28px 7px rgba(50, 50, 50, 0.6);
   display: flex;
   height: 65vh;
+  margin-top: 50px;
   padding: 10px;
   position: relative;
   width: 100%;
-  margin-top: 50px;
 }
 
 .board .circle {
@@ -61,41 +61,41 @@ body {
 }
 
 .red {
+  background-color: red;
   background: #fff;
   border-radius: 100px;
   box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
   display: flex;
   flex: 1;
   opacity: 1;
-  background-color: red;
 }
 
 .yellow {
+  background-color: yellow;
   background: #fff;
   border-radius: 100px;
   box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
   display: flex;
   flex: 1;
   opacity: 1;
-  background-color: yellow;
 }
 
 .reset-btn {
+  align-self: center;
   background-color: black;
   border-radius: 0.6em;
   color: white;
   display: flex;
-  align-self: center;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  font-weight: 700;
   line-height: 1;
   margin: 10px auto;
   padding: 1.2em 2.8em;
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
 }
 
 .reset-btn:hover {
@@ -105,25 +105,25 @@ body {
 
 .reset-btn:active {
   background-color: white;
-  color: black;
   box-shadow: 0 5px black;
+  color: black;
   transform: translateY(4px);
 }
 
 .player-box-container {
-  position: relative;
   display: flex;
+  position: relative;
 }
 
 .player-box {
   flex: 1;
-  text-align: center;
-  text-decoration: underline;
   font-family: sans-serif;
   font-size: 26px;
   font-weight: 200;
   line-height: 1.4;
   margin: 5px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .player-box-container .red {
@@ -131,10 +131,10 @@ body {
   border-radius: 54px;
   border: 2px solid black;
   box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
-  opacity: 1;
   height: 8vh;
-  width: 9%;
   margin: 0 auto;
+  opacity: 1;
+  width: 9%;
 }
 
 .player-box-container .yellow {
@@ -142,20 +142,20 @@ body {
   border-radius: 54px;
   border: 2px solid black;
   box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
-  opacity: 1;
   height: 8vh;
-  width: 9%;
   margin: 0 auto;
+  opacity: 1;
+  width: 9%;
 }
 
 .winner {
+  background-color: black;
   background: black;
   border-radius: 100px;
   box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
   display: flex;
   flex: 1;
   opacity: 1;
-  background-color: black;
 }
 
 .score {
@@ -163,8 +163,8 @@ body {
   font-size: 26px;
   font-weight: 200;
   line-height: 1.4;
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 
@@ -190,9 +190,9 @@ body {
     }
     .board {
       height: 65vh;
-      width: 65%;
-      margin: 0 auto;
       margin-top: 100px;
+      margin: 0 auto;
+      width: 65%;
     }
     .player-box-container .red {
       width: 16%
