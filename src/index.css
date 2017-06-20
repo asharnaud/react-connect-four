@@ -62,7 +62,6 @@ body {
 
 .red {
   background-color: red;
-  background: #fff;
   border-radius: 100px;
   box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
   display: flex;
@@ -72,7 +71,6 @@ body {
 
 .yellow {
   background-color: yellow;
-  background: #fff;
   border-radius: 100px;
   box-shadow: inset 7px 7px 20px 0px rgba(50, 50, 50, 0.4);
   display: flex;
