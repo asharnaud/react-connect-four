@@ -9,6 +9,8 @@ import './index.css';
 
 const initialState = {
   classVal: 'circle',
+  player1Score: 0,
+  player2Score: 0,
   playerTurn: 'r',
   coordinates: null,
   boardCoordinates: [
@@ -38,11 +40,11 @@ function Players () {
     <div className="player-box-container">
       <div className="player-box">
       <p>Player 1</p>
-      <div className='red'></div>
+      <div className='red'><p className='score'>{appState.player1Score}</p></div>
       </div>
       <div className="player-box">
       <p>Player 2</p>
-      <div className='yellow'></div>
+      <div className='yellow'><p className='score'>{appState.player2Score}</p></div>
       </div>
     </div>
   )

@@ -20,15 +20,22 @@ function isWinner () {
   if (status === 'winner_red' || status === 'winner_yellow') {
   appState.coordinates = coords
   for (let i = 0; i < coords.length; i++) {
-    console.log('COORDS', coords[i])
     for (let j = 0; j < appState.coordinates.length; j++) {
-      console.log('STATE', appState.coordinates[j])
           if (coords[i] === appState.coordinates[j]) {
             appState.classVal = 'winner'
         }
       }
     }
   }
+}
+
+function updateScore () {
+  let status = gameStatus(appState.board).status
+  if (status === 'winner_red') {
+    appState.player1Score += 1
+  } else if (status === 'winner_yellow') {
+      appState.player2Score += 1
+    }
 }
 
 function updateBoardPiece (index) {
@@ -39,8 +46,8 @@ function updateBoardPiece (index) {
     if (status === 'in_progress' && boardRow[i] === null) {
       boardRow[i] = appState.playerTurn
       switchTurn()
-      console.log(gameStatus(appState.board).coordinates)
       isWinner()
+      updateScore()
       return
     }
   }
